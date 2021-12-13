@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/spleshFragment">
+
+    <fragment
+        android:id="@+id/spleshFragment"
+        android:name="com.androidcourse.food_delivery.fragments.SpleshFragment"
+        android:label="fragment_splesh"
+        tools:layout="@layout/fragment_splesh" >
+        <action
+            app:popUpTo="@id/spleshFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_spleshFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.androidcourse.food_delivery.fragments.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.androidcourse.food_delivery.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.androidcourse.food_delivery.fragments.passwordFragment"
+        android:label="fragment_password"
+        tools:layout="@layout/fragment_password" >
+        <action
+            android:id="@+id/action_passwordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>
